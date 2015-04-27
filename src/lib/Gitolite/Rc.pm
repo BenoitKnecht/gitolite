@@ -493,7 +493,7 @@ __DATA__
     UMASK                           =>  0077,
 
     # look for "git-config" in the documentation
-    GIT_CONFIG_KEYS                 =>  '',
+    GIT_CONFIG_KEYS                 =>  '.*',
 
     # comment out if you don't need all the extra detail in the logfile
     LOG_EXTRA                       =>  1,
@@ -539,7 +539,7 @@ __DATA__
     # suggested locations for site-local gitolite code (see cust.html)
 
         # this one is managed directly on the server
-        # LOCAL_CODE                =>  "$ENV{HOME}/local",
+        LOCAL_CODE                  =>  "$ENV{HOME}/local",
 
         # or you can use this, which lets you put everything in a subdirectory
         # called "local" in your gitolite-admin repo.  For a SECURITY WARNING
@@ -609,6 +609,9 @@ __DATA__
 
             # show a message of the day
             # 'Motd',
+
+            # enable git-annex
+            'git-annex-shell ua',
 
         # system admin stuff
 
